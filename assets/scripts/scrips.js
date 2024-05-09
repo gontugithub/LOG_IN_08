@@ -1,22 +1,22 @@
 
-
-
 function fMostrarLogin(){
     // MOSTRAR EL FORMULARIO LOGIN
     document.querySelector("#div_modal").style.display = "flex";
 
+}
 
-
+function fCerrarModalLogin(){
+    document.querySelector("#div_modal").style.display = "none";
 }
 
 function fControlLogin(){
     // LEER EL ALIAS
     // LEER EL PASSWRD
-    let alias = document.querySelector("#alias").value;
+    let alias = document.querySelector("#usuario").value;
     let password = document.querySelector("#password").value;
 
 
-    let URL = "Assets/php/servidor.php?peticion=ControlLogin";
+    let URL = "assets/php/servidor.php?peticion=login";
 
     URL += "&alias=" + alias;
     URL += "&password=" + password;
@@ -27,21 +27,36 @@ function fControlLogin(){
             console.log(data);    
 
             if (data.datos.length > 0){
-                document.querySelector("#div_modal").style.display = "none"
-                document.querySelector("#div_login").innerHTML = "Hola, " + data.datos[0].usu_alias;
-                let foto = data.datos[0].usu_foto;
-                let ruta = "Assets/img/"
-                document.querySelector("#div_foto>img").src = ruta + foto;
+
+                let mensajelog = "BIENVENIDO " + (data.datos[0].nombre);
+
+    
+                document.querySelector("#info_error").innerHTML = mensajelog;
+                document.querySelector("#info_error").style.textTransform = "uppercase";
+                document.querySelector("#info_error").style.color = "black";
+                document.querySelector("#info_error").style.display = "block";
+                setTimeout(fCerrarModalLogin, 2000)
+                
+                
             } else {
-                document.querySelector("#div_error").innerHTML = "ACCESO DENEGADO"
+                document.querySelector("#info_error").innerHTML = "ACCESO DENEGADO"
+                document.querySelector("#info_error").style.color = "red";
+                document.querySelector("#info_error").style.display = "block";
             }
            
 
         })
+        .finally ( ()=>{
+            setTimeout(fquitarmensajerror, 2000)
+        } );
 
    
 
 
+}
+
+function fquitarmensajerror(){
+    document.querySelector("#info_error").style.display = "none";
 }
 
 

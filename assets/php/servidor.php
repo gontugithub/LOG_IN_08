@@ -18,5 +18,14 @@ if (isset($_REQUEST['peticion'])) {
             $datos['datos'] = BBDD_CTRLR::CRUD($sql, '');
             echo json_encode($datos);
             break;
+
+        case "login":
+            $alias = $_REQUEST['alias'];
+            $password = $_REQUEST['password'];
+            $sql = "call login('$alias','$password')";
+            $datos['sql'] = $sql;
+            $datos['datos'] = BBDD_CTRLR::Consultas($sql);
+            echo json_encode($datos);      
+            break;
     }        
 }
