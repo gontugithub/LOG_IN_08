@@ -5,6 +5,7 @@
     font-family: 'Poppins', sans-serif;
 }
 body{
+    overflow: hidden;
     height: 100vh;
     display: grid;
     grid-template-columns: 25% 1fr;
@@ -70,10 +71,10 @@ footer{
     width: 100%;
     height: 100%;
     position: absolute;
+    background-color: white;
     top: 0;
     left: 0;
     z-index: 20;
-    background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -85,6 +86,7 @@ footer{
     height: 100%;
     background-image: url(../img/eren-yildiz-88T_sr0LDeg-unsplash.jpg);
     background-size: cover;
+    background-blend-mode: color-dodge;
     opacity: 0.9;
     display: flex;
     align-items: center;
@@ -107,7 +109,6 @@ footer{
 #img_logo > img{
 height: 100%;
 
-
 }
 
 
@@ -117,37 +118,74 @@ height: 100%;
     justify-content: center;
     padding: 20px;
     border-radius: 10px;
+    background-color: bisque;
+    border-bottom: rgb(77, 51, 42) solid 4px;
+    border-right: rgb(77, 51, 42) solid 4px;
     
 }
 
 
 input{
     width: 90%;
-    margin: 5px;
-    padding: 7px;
-    padding-left: 9px;
-    border-radius: 10px;
+    padding: 4px;
+    padding-left: 0px;
     border-style: hidden;
-    border: rgba(0, 0, 0, 0.24) solid 1px;
+    border-bottom: rgba(0, 0, 0, 0.24) solid 1px;
     font-weight: bold;
     background-color: rgba(255, 255, 255, 0);
-    color: white;
+    color: rgb(0, 0, 0);
+    outline: none;
     
     
-
 }
+
+label{
+    width: 90%;
+    margin-top: 4px;
+}
+
+#backgroundlogo{
+    width: 40%;
+    height: 100%;
+    background-color: rgb(77, 51, 42);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+
 
 
 #botonlogin{
     width: 60%;
-    background-color: rgba(122,72,54,255);
+    background-color: rgba(77, 51, 42,255);
     opacity: 0.9;
+    margin: 10px;
+    color: white;
+    border-radius: 10px;
 
 }
 
 
 #h{
     background-image: url(../img/tyler-nix-wVexcTg7oXY-unsplash.jpg);
+}
+
+
+
+@media screen and (min-width:600px){
+    #fondoini{
+        width: 60%;
+
+    }
+
+    #backgroundlogo{
+        display: flex;
+       
+    }
+
+
+    
 }
 
 
