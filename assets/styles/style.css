@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 25% 1fr;
+    grid-template-rows: 100px 1fr 50px;
+    grid-template-areas: 
+    "zh zh"
+    "za zs"
+    "zf zf";
+}
+header{
+    grid-area: zh;
+    background-color: #000; 
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+#div_foto > img{
+    height: 100%;
+}
+
+#div_foto{
+    height: 80%;
+    
+}
+
+aside{
+    grid-area: za;
+    background-color: black;
+    color: white;
+}
+section {
+    grid-area: zs;
+    background-color: white; 
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+section > div {
+    border: 1px solid black;
+    height: 200px;
+    width: 100%;
+    padding-bottom: 20px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer{
+    grid-area: zf;
+    background-color: #000; 
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#div_modal{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#fondoini{
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/eren-yildiz-88T_sr0LDeg-unsplash.jpg);
+    background-size: cover;
+    opacity: 0.9;
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+    
+}
+
+#img_logo{
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+#img_logo > img{
+height: 100%;
+
+
+}
+
+
+#inputs{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+    
+}
+
+
+input{
+    width: 90%;
+    margin: 5px;
+    padding: 7px;
+    padding-left: 9px;
+    border-radius: 10px;
+    border-style: hidden;
+    border: rgba(0, 0, 0, 0.24) solid 1px;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+    
+    
+
+}
+
+
+#botonlogin{
+    width: 60%;
+    background-color: rgba(122,72,54,255);
+    opacity: 0.9;
+
+}
+
+
+#h{
+    background-image: url(../img/tyler-nix-wVexcTg7oXY-unsplash.jpg);
+}
+
+
+
