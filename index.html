@@ -11,26 +11,45 @@
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
     <script src="Assets/scripts/scrips.js"></script>
 </head>
-<body onload="fMostrarLogin()">
+<body onload="fMostrarRegistro()">
 
     <div id="div_modal">
-        <div id="fondoini">
+        <div class="fondoini">
             <div id="inputs">
-                <div id="img_logo"><img src="assets/img/image.png" id="logo"></div>
+                <div class="img_logo"><img src="assets/img/image.png" id="logo"></div>
                 <label for="usuario">USER</label>
                 <input type="text" id="usuario" value="gontu">
-                <label for="usuario">PASSWORD</label>
+                <label for="password">PASSWORD</label>
                 <input type="password" id="password" value="gontu">
                 <label id="info_error"></label>
                 <input type="button" value="LOG IN" id="botonlogin" onclick="fControlLogin()">
             </div>
         </div>
-        <div id="backgroundlogo">
+        <div class="backgroundlogo">
             <div id="img_logo_background"><img src="assets/img/imageblanco.png" id="logo"></div>
         </div>
     </div>
 
-    <div id="login"></div>
+    <div id="div_registro">
+        <div class="fondoini">
+            <div id="r_inputs">
+                <div class="img_logo"><img src="assets/img/image.png" id="logo"></div>
+                <label for="r_nombre">NOMBRE</label>
+                <input type="text" id="r_nombre" value="gontu">
+                <label for="r_usuario">USER</label>
+                <input type="text" id="r_usuario" value="gontu">
+                <label for="r_password">PASSWORD</label>
+                <input type="password" id="r_password" value="gontu">
+                <label for="rs_password">SAME PASSWORD</label>
+                <input type="password" id="rs_password" value="gontu">
+                <label id="r_info_error"></label>
+                <input type="button" value="REGISTRO" id="botonregistro" onclick="fRegistro()">
+            </div>
+        </div>
+        <div class="backgroundlogo">
+            <div id="img_logo_background"><img src="assets/img/imageblanco.png" id="logo"></div>
+        </div>
+    </div>
     
    
     <header>

@@ -81,7 +81,22 @@ footer{
     flex-wrap: wrap;
 }
 
-#fondoini{
+
+#div_registro{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: white;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.fondoini{
     width: 100%;
     height: 100%;
     background-image: url(../img/eren-yildiz-88T_sr0LDeg-unsplash.jpg);
@@ -94,7 +109,7 @@ footer{
     
 }
 
-#img_logo{
+.img_logo{
     position:fixed;
     top: 0;
     left: 0;
@@ -106,9 +121,18 @@ footer{
     margin: 20px;
 }
 
-#img_logo > img{
+.img_logo > img{
 height: 100%;
 
+}
+
+#r_inputs{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: bisque;
 }
 
 
@@ -145,7 +169,7 @@ label{
     margin-top: 4px;
 }
 
-#backgroundlogo{
+.backgroundlogo{
     width: 40%;
     height: 100%;
     background-color: rgb(77, 51, 42);
@@ -154,7 +178,15 @@ label{
     justify-content: center;
 }
 
+#botonregistro{
+    width: 60%;
+    background-color: rgba(77, 51, 42,255);
+    opacity: 0.9;
+    margin: 10px;
+    color: white;
+    border-radius: 10px;
 
+}
 
 
 #botonlogin{
@@ -175,12 +207,12 @@ label{
 
 
 @media screen and (min-width:1000px){
-    #fondoini{
+    .fondoini{
         width: 60%;
 
     }
 
-    #backgroundlogo{
+    .backgroundlogo{
         display: flex;
        
     }

@@ -5,6 +5,12 @@ function fMostrarLogin(){
 
 }
 
+function fMostrarRegistro(){
+    // MOSTRAR EL FORMULARIO LOGIN
+    document.querySelector("#div_registro").style.display = "flex";
+
+}
+
 function fCerrarModalLogin(){
     document.querySelector("#div_modal").style.display = "none";
 }
@@ -57,8 +63,47 @@ function fControlLogin(){
 
 function fquitarmensajerror(){
     document.querySelector("#info_error").style.display = "none";
+    document.querySelector("#r_info_error").style.display = "none";
 }
 
+function fRegistro(){
+
+    let nombre = document.querySelector("#r_nombre").value;
+    let usuario = document.querySelector("#r_usuario").value;
+
+
+    if (document.querySelector("#r_password").value == document.querySelector("#rs_password").value) {
+
+        let password = document.querySelector("#r_password").value;
+
+        let sql = `call registro('${nombre}', '${usuario}', '${password}')`;
+
+        let URL = "assets/php/servidor.php?peticion=EjecutarInsert&sql=" + sql;
+
+        fetch(URL)
+        .then((response) => response.json())
+        .then((data) => {
+            console.log(data);    
+
+            if
+           
+
+        })
+        
+    } else {
+
+                document.querySelector("#r_info_error").innerHTML = "CONTRASEÑAS NO COINCIDEN"
+                document.querySelector("#r_info_error").style.color = "red";
+                document.querySelector("#r_info_error").style.display = "block";  
+                setTimeout(fquitarmensajerror, 2000)
+
+    }
+
+    
+
+
+
+}
 
 
 
